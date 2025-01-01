@@ -1,0 +1,48 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Clinical Data Report</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href=" {% static 'css/clinicals.css' %}">
+    </head>
+    <body>
+        <h1>Clinical Data Report</h1>
+        <table border=2>
+            <thead>
+              
+                    <th>Componenet Name</th>
+                    <th>Component Value</th>
+                    <th>Measure date Time</th>
+                
+            </thead>
+            
+                {% for eachentry in data %}
+                <tr >
+                    <td>{{ eachentry.componentName}}</td>
+                    <td>{{ eachentry.componentValue}}</td>
+                    <td>{{ eachentry.measureDateTime}}</td>
+                </tr>
+                {% endfor %}
+            
+        </table>
+
+        <br>
+        <a href="/">Home</a>
+
+
+
+
+        <script src="" async defer></script>
+    </body>
+</html>
