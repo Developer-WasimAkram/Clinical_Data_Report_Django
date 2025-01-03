@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path
 from clinicalsApp import views
 from student.views import setcookie,getcookie,delcookie
+from session.views import setsession,getsession,delsession
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -31,4 +32,7 @@ urlpatterns = [
     path("set/", setcookie),
     path("get/", getcookie),
     path("del/", delcookie),
+    path("setsession/", setsession),
+    path("getsession/", getsession),
+    path("delsession/", delsession),
 ]
