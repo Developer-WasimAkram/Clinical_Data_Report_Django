@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "clinicalsApp"
+    "clinicalsApp",
+    "student"
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         "NAME": "clinicals_db",
         "USER": "postgres",
         "PASSWORD": "Domain@@15489",
-        "HOST": "localhost",
+        #"HOST": "docker-postgresql",
         "PORT": "5432",
     }
 }

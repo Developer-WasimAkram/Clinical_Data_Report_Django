@@ -18,6 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from clinicalsApp import views
+from student.views import setcookie,getcookie,delcookie
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,5 +28,7 @@ urlpatterns = [
     path('delete/<int:pk>', views.PatientDeleteView.as_view()),
     path("addData/<int:pk>", views.addData),
     path("analyze/<int:pk>", views.analyze),
-    
+    path("set/", setcookie),
+    path("get/", getcookie),
+    path("del/", delcookie),
 ]

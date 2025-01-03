@@ -1,6 +1,3 @@
-
-{% load static %}
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,27 +7,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Add Clinical data</title>
+        <title>Set Cookie</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href=" {% static 'css/clinicals.css' %}">
+        <link rel="stylesheet" href="">
     </head>
     <body>
-       <h2>Patient Details:</h2>
-       FirstName: {{patient.firstName}}
-       LastName: {{patient.lastName}}
-       Age: {{patient.age}}
-      <form method="post" >
-        <table border = 2>
-        {% csrf_token %}
-        {{form.as_table}}
-       </table>
-       <br>
-       <input type="submit" value="Save" >
-       <a href="/">Home</a>
-
-
-      </form>   
+        <h2>Set Cookie</h2>
+        
         <script src="" async defer></script>
     </body>
 </html>
